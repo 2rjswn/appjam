@@ -10,15 +10,11 @@ spring:
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
         show-sql: true
         format_sql: true
-
-  data:
-    rest:
-      base-path: /appjam
 
 jwt:
   access: 1800000
@@ -27,4 +23,5 @@ jwt:
 ngrok:
   enabled: true
   auth-token: ${NGROK_AUTH}
+  command: ngrok http 8080 --domain guiding-fully-gecko.ngrok-free.app
 
