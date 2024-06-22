@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: dopamine
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show-sql: true
+        format_sql: true
+
+  data:
+    rest:
+      base-path: /appjam
+
+jwt:
+  access: 1800000
+  secret: ${SECRET_KEY}
+
+ngrok:
+  enabled: true
+  auth-token: ${NGROK_AUTH}
+
