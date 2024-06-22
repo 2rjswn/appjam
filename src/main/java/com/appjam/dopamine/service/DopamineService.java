@@ -13,7 +13,7 @@ public class DopamineService {
     private final AuthService authService;
     public void addDopamine(PickDopamineRequest request) {
         User user = authService.getCurrentUser();
-        Long dopamineToAdd = Long.valueOf(Math.toIntExact(Long.parseLong(request.getDopamine())));
+        int dopamineToAdd = Math.toIntExact(request.getDopamine());
         user.setDopamine(user.getDopamine() + dopamineToAdd);
     }
 }

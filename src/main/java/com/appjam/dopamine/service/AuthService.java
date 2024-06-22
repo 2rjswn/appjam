@@ -32,6 +32,7 @@ public class AuthService {
         if(!userRepository.existsUserByName(request.getName())) {
             User user = User.builder()
                     .name(request.getName())
+                    .dopamine(0L)
                     .password(passwordEncoder.encode(request.getPassword()))
                     .role(String.valueOf(Role.USER))
                     .build();

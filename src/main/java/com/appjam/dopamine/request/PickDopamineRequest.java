@@ -6,5 +6,5 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PickDopamineRequest {
-    private String dopamine;
+    private Long dopamine;
 }
